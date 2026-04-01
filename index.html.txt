@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरा बच्चा - Private Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="loginScreen" class="screen active">
+            <div class="login-box">
+                <h1>👶 मेरा बच्चा</h1>
+                <p>अपना PIN दर्ज करें</p>
+                <div class="pin-input">
+                    <input type="password" id="pinInput" maxlength="6" placeholder="******">
+                    <button onclick="checkPin()">देखें</button>
+                </div>
+                <p class="warning">⚠️ केवल माता-पिता के लिए</p>
+            </div>
+        </div>
+
+        <!-- Profile Screen -->
+        <div id="profileScreen" class="screen">
+            <div class="header">
+                <button onclick="logout()" class="logout-btn">🚪 बाहर</button>
+            </div>
+            <div class="profile-content">
+                <div class="baby-photo">
+                    <img src="baby-placeholder.jpg" alt="Baby Photo" id="babyPhoto">
+                </div>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h3>👶 बेसिक जानकारी</h3>
+                        <div id="basicInfo"></div>
+                    </div>
+                    <div class="detail-card">
+                        <h3>📅 मेडिकल रिकॉर्ड</h3>
+                        <div id="medicalInfo"></div>
+                    </div>
+                    <div class="detail-card">
+                        <h3>📊 ग्रोथ चार्ट</h3>
+                        <div id="growthInfo"></div>
+                    </div>
+                    <div class="detail-card">
+                        <h3>💉 वैक्सीनेशन</h3>
+                        <div id="vaccinationInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suspicious Activity Alert -->
+        <div id="suspiciousAlert" class="alert hidden">
+            <div class="alert-content">
+                <h2>🚨 संदिग्ध गतिविधि!</h2>
+                <p>आपका IP ब्लॉक हो गया है।</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
